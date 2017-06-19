@@ -9,10 +9,10 @@ COPY package.json /usr/src/app/
 RUN npm install --production
 
 # Bundle app source
-COPY bin /usr/src/app
-COPY public /usr/src/app
-COPY routes /usr/src/app
-COPY views /usr/src/app
+COPY bin /usr/src/app/bin
+COPY public /usr/src/app/public
+COPY routes /usr/src/app/routes
+COPY views /usr/src/app/views
 COPY app.js /usr/src/app
 
 EXPOSE 3000
