@@ -6,7 +6,7 @@ var os = require('os');
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Test',
-    firstname: 'Axel',
+    firstname: process.env.FIRSTNAME ? process.env.FIRSTNAME : 'no name' ,
     server: os.hostname()
   });
 });
