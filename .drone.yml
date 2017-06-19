@@ -3,4 +3,9 @@ pipeline:
     image: node:6
     commands:
       - npm install
-      - npm run test
+  publish:
+    image: plugins/docker
+    repo: amoussard/app-test
+    tags: [ latest ]
+    username: amoussard
+    password: moabistudio
